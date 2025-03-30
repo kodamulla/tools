@@ -63,11 +63,7 @@
                 <div class="data-option-card">
                     <h3>Date Range</h3>
                     <p>Select time period for analysis</p>
-                    <div class="date-range-inputs">
-                        <input type="date" id="startDate" placeholder="MM / DD /YYYY">
-                        <input type="date" id="endDate" placeholder="MM / DD /YYYY">
-                        <button onclick="applyDateFilter()">Apply Filters</button>
-                    </div>
+                    
                 </div>
 
 				
@@ -83,6 +79,18 @@
                     <button onclick="exportData()">Export</button>
                 </div>
             </div>
+
+			<div class="filter-container">
+                <div class="date-range-inputs">
+                  <label for="start-date">Start Date</label>
+                  <input type="date" id="startDate" placeholder="MM / DD /YYYY">
+                </div>
+                <div class="date-range-inputs">
+                  <label for="end-date">End Date</label>
+                  <input type="date" id="endDate" placeholder="MM / DD /YYYY">
+                </div>
+                <button onclick="applyDateFilter()" id="apply">Apply Filters</button>
+            </div>
 
             <div class="filter-section">
                 <div class="chart-types">
