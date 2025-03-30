@@ -6,88 +6,162 @@
     <title>Historical Data Analysis</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    
-    
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>Side Bar</title>
     
 </head>
 <body>
-    <!-- SIDEBAR -->
-	<section id="sidebar">
-		<div class="logo">
+
+    <section id="sidebar">
+        <div class="logo">
             <div class="icon">✤</div>
             <div class="text">
                 <h1>GreenBreath</h1>
                 <p>Monitoring Air, Protecting Lives</p>
             </div>
         </div>
-		<ul class="side-menu">
-			<li><a href="#" class="active"><i class='bx bxs-dashboard icon' ></i> Dashboard</a></li>
-			<li class="divider" data-text="main">Main</li>
-			<li>
-				<a href="#"><i class='bx bxs-chip icon'></i> Sensors</a>
+        <ul class="side-menu">
+            <li><a href="#" class="active"><i class='bx bxs-dashboard icon' ></i> Dashboard</a></li>
+            <li class="divider" data-text="main">Main</li>
+            <li>
+                <a href="#"><i class='bx bxs-chip icon'></i> Sensors</a>
+            </li>
+            <li><a href="#"><i class='bx bxs-bar-chart-alt-2 icon'></i> Data Simulation</a></li>
+            <li><a href="#"><i class='bx bxs-time-five icon'></i> Historical Data</a></li>
+            <li><a href="#"><i class='bx bxs-bell icon'></i> Alert</a></li>
+            <li><a href="#"><i class='bx bxs-cog icon'></i> Setting</a></li>
 
-                <li><a href="#"><i class='bx bxs-bar-chart-alt-2 icon'></i> Data Simulation</a></li>
-                <li><a href="#"><i class='bx bxs-time-five icon'></i> Historical Data</a></li>
-                <li><a href="#"><i class='bx bxs-bell icon'></i> Alert</a></li>
-                <li><a href="#"><i class='bx bxs-cog icon'></i> Setting</a></li>
-                
-
-			<li class="divider" data-text="table and forms">Reports</li>
+            <li class="divider" data-text="table and forms">Reports</li>
             <li><a href="#"><i class='bx bx-book icon'></i> Daily Report</a></li>
             <li><a href="#"><i class='bx bx-bar-chart-alt-2 icon'></i> Monthly Analysis</a></li>
-             </ul>
-		<div class="ads">
-			<div class="wrapper">
-				<a href="#" class="btn-upgrade">Log Out</a>
-				<p></p>
-			</div>
-		</div>
-	</section>
-	<!-- SIDEBAR -->
-
-	<!-- NAVBAR -->
-	<section id="content">
-		<!-- NAVBAR -->
-		<nav>
-			<i class='bx bx-menu toggle-sidebar' ></i>
-			<!-- <form action="#">
-				<div class="form-group">
-					<input type="text" placeholder="Search...">
-					<i class='bx bx-search icon' ></i>
-				</div>
-			</form> -->
-
-			<!-- <a href="#" class="nav-link">
-				<i class='bx bxs-bell icon' ></i>
-				<span class="badge">5</span>
-			</a>
-			<a href="#" class="nav-link">
-				<i class='bx bxs-message-square-dots icon' ></i>
-				<span class="badge">8</span>
-			</a> -->
-			<span class="divider"></span>
-			<div class="profile">
+        </ul>
+        <div class="ads">
+            <div class="wrapper">
+                <a href="#" class="btn-upgrade">Log Out</a>
+                <p></p>
+            </div>
+        </div>
+    </section>
+    <section id="content">
+        <nav>
+            <i class='bx bx-menu toggle-sidebar' ></i>
+            <div class="profile">
                 <span class="user-name">Hello, User Name</span>
                 <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cGVvcGxlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="">
             </div>
-            
-		</nav>
-		<!-- NAVBAR -->
+        </nav>
+        <main>
+            <div class="header-section">
+                <h1>Historical Data Analysis</h1>
+                <div class="breadcrumbs">
+                    <a href="#">Dashboard</a> / Historical Data
+                </div>
+            </div>
 
-		<!-- MAIN -->
-		<main>
-			<h1 class="title">Dashboard</h1>
-			<ul class="breadcrumbs">
-				<li><a href="#">Home</a></li>
-				<li class="divider">/</li>
-				<li><a href="#" class="active">Dashboard</a></li>
-			
-		</main>
-		<!-- MAIN -->
-	</section>
-	<!-- NAVBAR -->
-     
-    
-</body>
-</html>
+            <div class="data-options">
+                <div class="data-option-card">
+                    <h3>Date Range</h3>
+                    <p>Select time period for analysis</p>
+                    <div class="date-range-inputs">
+                        <input type="date" id="startDate" placeholder="MM / DD /YYYY">
+                        <input type="date" id="endDate" placeholder="MM / DD /YYYY">
+                        <button onclick="applyDateFilter()">Apply Filters</button>
+                    </div>
+                </div>
+
+				
+
+                <div class="data-option-card">
+                    <h3>Sensor Selection</h3>
+                    <p>Filter by specific sensors</p>
+                    
+                </div>
+                <div class="data-option-card">
+                    <h3>Data Export</h3>
+                    <p>Download data in CSV / Excel</p>
+                    <button onclick="exportData()">Export</button>
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <div class="chart-types">
+                    <button class="active" onclick="changeChart('line')">Line Chart</button>
+                    <button onclick="changeChart('bar')">Bar Graph</button>
+                    <button onclick="changeChart('heatmap')">Heatmap</button>
+                    <button onclick="changeChart('comparison')">Comparison</button>
+                    <button onclick="changeChart('forecasting')">Forecasting</button>
+                </div>
+            </div>
+
+            <div class="data-visualization">
+                <img src="placeholder_chart.png" alt="Data Visualization Chart" id="dataChart" style="width: 100%; height: auto;">
+            </div>
+
+            <div class="summary-statistics">
+                <div class="summary-stat-card">
+                    <h4>Average AQI</h4>
+                    <p id="averageAQI"></p>
+                </div>
+                <div class="summary-stat-card">
+                    <h4>Maximum AQI</h4>
+                    <p id="maximumAQI">87.3</p>
+                </div>
+                <div class="summary-stat-card">
+                    <h4>Minimum AQI</h4>
+                    <p id="minimumAQI">12.8</p>
+                </div>
+                <div class="summary-stat-card anomalies">
+                    <h4>Anomalies Detected</h4>
+                    <p id="anomaliesCount">3 instances</p>
+                    <a href="#" onclick="viewAnomalies()">View Details</a>
+                </div>
+            </div>
+
+            <div class="sensor-data-section">
+                <h2>Sensor Data</h2>
+                <table class="sensor-data-table" id="sensorDataTable">
+                    <thead>
+                        <tr>
+                            <th>Sensor ID</th>
+                            <th>Location</th>
+                            <th>AQI</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Sensor A - 101</td>
+                            <td>Downtown</td>
+                            <td>42.3</td>
+                            <td><span class="sensor-status status-good">Good</span></td>
+                        </tr>
+                        <tr>
+                            <td>Sensor B - 205</td>
+                            <td>Industrial Zone</td>
+                            <td>68.7</td>
+                            <td><span class="sensor-status status-moderate">Moderate</span></td>
+                        </tr>
+                        <tr>
+                            <td>Sensor C - 310</td>
+                            <td>Residential Area</td>
+                            <td>35.2</td>
+                            <td><span class="sensor-status status-good">Good</span></td>
+                        </tr>
+                        <tr>
+                            <td>Sensor D - 422</td>
+                            <td>Park Zone</td>
+                            <td>22.1</td>
+                            <td><span class="sensor-status status-good">Good</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="action-buttons">
+                <button onclick="generateReport()">Generate Report</button>
+                <button onclick="saveAnalysis()">Save Analysis</button>
+            </div>
+        </main>
+        </section>
+    <script src="script.
