@@ -77,18 +77,18 @@
                 <div class="data-option-card">
                     <h3>Data Export</h3>
                     <p>Download data in CSV / Excel</p>
-                    <button onclick="exportData()">Export</button>
+                    <button onclick="exportData()" id="export">Export</button>
                 </div>
             </div>
 
 			<div class="filter-container">
                 <div class="date-range-inputs">
                   <label for="start-date">Start Date</label>
-                  <input type="date" id="startDate" placeholder="MM / DD /YYYY">
+                  <input type="date" id="startDate" placeholder="MM / DD /YYYY" style="border-radius: 25px; padding: 15px; width: 200px;">
                 </div>
                 <div class="date-range-inputs">
                   <label for="end-date">End Date</label>
-                  <input type="date" id="endDate" placeholder="MM / DD /YYYY">
+                  <input type="date" id="endDate" placeholder="MM / DD /YYYY" style="border-radius: 25px; padding: 15px; width: 200px;">
                 </div>
                 <button onclick="applyDateFilter()" id="apply">Apply Filters</button>
             </div>
@@ -125,8 +125,8 @@
                 </div>
                 <div class="summary-stat-card anomalies">
                     <h4>Anomalies Detected</h4>
-                    <p id="anomaliesCount">3 instances</p>
-                    <a href="#" onclick="viewAnomalies()">View Details</a>
+                    <h5>3 instances</h5>
+                    <a href="#" onclick="viewAnomalies()" id="export" style="width:80px">View Details</a>
                 </div>
             </div>
 
