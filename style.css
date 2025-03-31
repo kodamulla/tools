@@ -216,9 +216,9 @@ body {
 }
 
 .summary-statistics {
-    background-color: #fff;
+    
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 10px;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.05);
     margin-bottom: 20px;
     display: grid;
@@ -227,10 +227,11 @@ body {
 }
 
 .summary-stat-card {
+    background-color: white;
     border: 1px solid #ddd;
     padding: 15px;
-    border-radius: 4px;
-    text-align: center;
+    border-radius: 20px;
+    text-align: left;
 }
 
 .summary-stat-card h4 {
@@ -263,7 +264,7 @@ body {
 }
 
 .sensor-data-section {
-    background-color: #fff;
+    
     padding: 20px;
     border-radius: 8px;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.05);
@@ -324,16 +325,17 @@ body {
 
 .action-buttons {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     gap: 10px;
+    
 }
 
 .action-buttons button {
-    background-color: #007bff;
+    background-color: #6eadef;
     color: #fff;
     border: none;
     padding: 10px 15px;
-    border-radius: 25px;
+    border-radius: 20px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }

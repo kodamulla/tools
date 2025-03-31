@@ -133,45 +133,50 @@
             <div class="sensor-data-section">
                 <h2>Sensor Data</h2>
                 <table class="sensor-data-table" id="sensorDataTable">
-                    <thead>
-                        <tr>
-                            <th>Sensor ID</th>
-                            <th>Location</th>
-                            <th>AQI</th>
-                            <th>Status</th>
-                        </tr>
-                    </thead>
+                    
                     <tbody>
                         <tr>
                             <td>Sensor A - 101</td>
                             <td>Downtown</td>
                             <td>42.3</td>
-                            <td><span class="sensor-status status-good">Good</span></td>
+                            <td><span class="sensor-status status-good">Good</span>
+								<td><i class='bx bx-show' id="toggleDate"></i></td>
+								<td><i class='bx bx-dots-vertical-rounded' id="menuIcon"></i></td>
+							</td>
                         </tr>
                         <tr>
                             <td>Sensor B - 205</td>
                             <td>Industrial Zone</td>
                             <td>68.7</td>
-                            <td><span class="sensor-status status-moderate">Moderate</span></td>
+                            <td><span class="sensor-status status-moderate">Moderate</span>
+								<td><i class='bx bx-show' id="toggleDate"></i></td>
+								<td><i class='bx bx-dots-vertical-rounded' id="menuIcon"></i></td>
+							</td>
                         </tr>
                         <tr>
                             <td>Sensor C - 310</td>
                             <td>Residential Area</td>
                             <td>35.2</td>
-                            <td><span class="sensor-status status-good">Good</span></td>
+                            <td><span class="sensor-status status-good">Good</span>
+								<td><i class='bx bx-show' id="toggleDate"></i></td>
+								<td><i class='bx bx-dots-vertical-rounded' id="menuIcon"></i></td>
+							</td>
                         </tr>
                         <tr>
                             <td>Sensor D - 422</td>
                             <td>Park Zone</td>
                             <td>22.1</td>
-                            <td><span class="sensor-status status-good">Good</span></td>
+                            <td><span class="sensor-status status-good">Good</span>
+								<td><i class='bx bx-show' id="toggleDate"></i></td>
+								<td><i class='bx bx-dots-vertical-rounded' id="menuIcon"></i></td>
+							</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
 
             <div class="action-buttons">
-                <button onclick="generateReport()">Generate Report</button>
+                <button onclick="generateReport()" style="background-color:#007bff;">Generate Report</button>
                 <button onclick="saveAnalysis()">Save Analysis</button>
             </div>
         </main>
